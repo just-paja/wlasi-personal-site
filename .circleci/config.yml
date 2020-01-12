@@ -70,7 +70,7 @@ jobs:
           command: >
             env
             NGINX_STATIC_VERSION=$CIRCLE_TAG
-            ansible-playbook deploy.yml -i inventory.yml
+            ./.venv/bin/vrun ansible-playbook deploy.yml -i inventory.yml
 
 workflows:
   version: 2
