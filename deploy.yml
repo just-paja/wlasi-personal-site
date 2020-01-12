@@ -1,0 +1,13 @@
+---
+- name: Deploy the project
+  hosts: web
+  roles:
+    - role: practical-ansible.nginx-redirect
+      nginx_redirect_project_name: com-honzavlasak
+      nginx_redirect_server_name: www.honzavlasak.com
+      nginx_redirect_destination_domain: honzavlasak.com
+    - role: practical-ansible.nginx-static
+      nginx_static_project_name: com-honzavlasak
+      nginx_static_server_name: honzavlasak.com
+      nginx_static_project_environment: production
+      nginx_static_directory: dist/
