@@ -61,7 +61,7 @@ jobs:
             pip install ansible vrun
       - run:
           name: Install ansible requirements
-          command: ./.venv/bin/vrun ansible-galaxy install -r requirements.yml
+          command: ./.venv/bin/vrun ansible-galaxy install -r requirements-ansible.yml
       - run:
           name: Configure ansible inventory
           command: echo -e "[web]\n${PRODUCTION_DEPLOY_HOST}" > inventory.yml
