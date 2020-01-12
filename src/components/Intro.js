@@ -3,14 +3,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { LogoLoader } from './LogoLoader';
 import { Motto } from './Motto';
 import { ProfilePicture } from './ProfilePicture';
-import { Section } from './Section';
+import { Container } from './Container';
 
 import './Intro.scss';
 
 const styles = {
   heading: 'introHeading',
   section: 'introSection',
-  sectionContainer: 'introSectionContainer',
 };
 
 function useInterval(callback, delay) {
@@ -39,14 +38,14 @@ export function Intro({ variant }) {
   }, progress < 1 ? 100 : null);
 
   return (
-    <div className={styles.section}>
-      <Section className={styles.sectionContainer}>
+    <section className={styles.section}>
+      <Container>
         <h1 className={styles.heading}>Honza Vlasák</h1>
         <LogoLoader progress={progress}>
           <ProfilePicture />
           <Motto />
         </LogoLoader>
-      </Section>
-    </div>
+      </Container>
+    </section>
   );
 }
