@@ -18,15 +18,18 @@ $color-heading: rgba($color-gold, 0.9);
 
 $grid-size: 8px;
 
+$font-size-xs: 12px;
 $font-size-sm: 16px;
 $font-size-md: 24px;
 $font-size-lg: 32px;
 $font-size-xl: 40px;
 
+$line-height-xs: $font-size-xs * 1.5;
 $line-height-sm: $font-size-sm * 1.5;
 $line-height-md: $font-size-md * 1.5;
 $line-height-lg: $font-size-lg * 1.5;
 $line-height-xl: $font-size-xl * 1.5;
 
 $presenter-size-xs: $min-size - $grid-size * 4;
+$presenter-size-sm: $breakpoint-sm * 0.75;
 $presenter-size-md: $breakpoint-sm;

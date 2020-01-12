@@ -1,8 +1,11 @@
 import React from 'react';
 
+import { Section } from './Section';
+
 export function Vision() {
   return (
-    <div>
+    <Section id="my-vision">
+      <h1>My vision</h1>
       <h3>Learn and share knowledge</h3>
       <p>I want to get to know as many different markets as possible, bring know-how from central Europe and just have fun exchanging tips and tricks.</p>
 
@@ -11,6 +14,6 @@ export function Vision() {
 
       <h3>Go all around the world</h3>
       <p>Hospitality and bartending is a universal language everywhere. And every bar in every country is unique. I want to travel and see our industry in global picture.</p>
-    </div>
+    </Section>
   )
 }

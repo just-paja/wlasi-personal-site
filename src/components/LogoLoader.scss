@@ -1,6 +1,12 @@
 @import '../styles/variables.scss';
 
-$loader-padding: $line-height-md / 2;
+$loader-padding-xs: $line-height-xs / 2;
+$loader-padding-sm: $line-height-sm / 2;
+$loader-padding-md: $line-height-md / 2;
+
+$loader-padding-inverse-xs: $loader-padding-xs * -1;
+$loader-padding-inverse-sm: $loader-padding-sm * -1;
+$loader-padding-inverse-md: $loader-padding-md * -1;
 
 .logoLoader,
 .logoContainer,
@@ -8,9 +14,27 @@ $loader-padding: $line-height-md / 2;
   height: $presenter-size-xs;
   width: $presenter-size-xs;
 
+  @media (min-width: $breakpoint-sm) {
+    height: $presenter-size-sm;
+    width: $presenter-size-sm;
+  }
+
   @media (min-width: $breakpoint-md) {
     height: $presenter-size-md;
     width: $presenter-size-md;
+  }
+}
+
+.logoLoader,
+.logoLoaderColor {
+  padding: $loader-padding-xs;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: $loader-padding-sm;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    padding: $loader-padding-md;
   }
 }
 
@@ -18,7 +42,6 @@ $loader-padding: $line-height-md / 2;
   background: $color-background;
   border-radius: 100%;
   margin: 0 auto;
-  padding: $loader-padding;
 }
 
 .logoContainer {
@@ -31,13 +54,27 @@ $loader-padding: $line-height-md / 2;
 }
 
 .logoLoaderColorContainer {
-  bottom: $loader-padding * -1;
-  left: $loader-padding * -1;
-  margin-top: $loader-padding * -1;
   overflow: hidden;
   position: absolute;
-  right: $loader-padding * -1;
   transition: top 2s;
+  bottom: $loader-padding-inverse-xs;
+  left: $loader-padding-inverse-xs;
+  margin-top: $loader-padding-inverse-xs;
+  right: $loader-padding-inverse-xs;
+
+  @media (min-width: $breakpoint-sm) {
+    bottom: $loader-padding-inverse-sm;
+    left: $loader-padding-inverse-sm;
+    margin-top: $loader-padding-inverse-sm;
+    right: $loader-padding-inverse-sm;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    bottom: $loader-padding-inverse-md;
+    left: $loader-padding-inverse-md;
+    margin-top: $loader-padding-inverse-md;
+    right: $loader-padding-inverse-md;
+  }
 }
 
 .logoLoaderColor {
@@ -46,6 +83,5 @@ $loader-padding: $line-height-md / 2;
   border-radius: 100%;
   bottom: 0;
   display: flex;
-  padding: $loader-padding;
   position: absolute;
 }

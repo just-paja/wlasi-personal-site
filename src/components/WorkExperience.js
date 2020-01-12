@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { EmploymentDetail } from './EmploymentDetail';
+import { Section } from './Section';
 
 const employments = [
   {
@@ -46,13 +47,14 @@ const employments = [
 
 export function WorkExperience() {
   return (
-    <div>
+    <Section id="my-experience">
+      <h1>My Experience</h1>
       {employments.map(employment => (
         <EmploymentDetail
           key={employment.name}
           employment={employment}
         />
       ))}
-    </div>
+    </Section>
   )
 }

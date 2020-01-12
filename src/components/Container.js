@@ -11,9 +11,13 @@ export function Container({
   children,
   className,
   component: Component = 'div',
+  ...props
 }) {
   return (
-    <Component className={classnames(styles.container, className)}>
+    <Component
+      className={classnames(styles.container, className)}
+      {...props}
+    >
       {children}
     </Component>
   )

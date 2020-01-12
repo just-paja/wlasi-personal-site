@@ -17,6 +17,11 @@
   height: $presenter-size-xs;
   width: $presenter-size-xs;
 
+  @media (min-width: $breakpoint-sm) {
+    width: $presenter-size-sm;
+    height: $presenter-size-sm;
+  }
+
   @media (min-width: $breakpoint-md) {
     width: $presenter-size-md;
     height: $presenter-size-md;
