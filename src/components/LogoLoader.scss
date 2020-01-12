@@ -1,0 +1,51 @@
+@import '../styles/variables.scss';
+
+$loader-padding: $line-height-md / 2;
+
+.logoLoader,
+.logoContainer,
+.logoLoaderColor {
+  height: $presenter-size-xs;
+  width: $presenter-size-xs;
+
+  @media (min-width: $breakpoint-md) {
+    height: $presenter-size-md;
+    width: $presenter-size-md;
+  }
+}
+
+.logoLoader {
+  background: $color-background;
+  border-radius: 100%;
+  margin: 0 auto;
+  padding: $loader-padding;
+}
+
+.logoContainer {
+  align-items: center;
+  justify-content: center;
+  background: $color-primary;
+  border-radius: 100%;
+  display: flex;
+  position: relative;
+}
+
+.logoLoaderColorContainer {
+  bottom: $loader-padding * -1;
+  left: $loader-padding * -1;
+  margin-top: $loader-padding * -1;
+  overflow: hidden;
+  position: absolute;
+  right: $loader-padding * -1;
+  transition: top 2s;
+}
+
+.logoLoaderColor {
+  align-items: center;
+  background: $color-background;
+  border-radius: 100%;
+  bottom: 0;
+  display: flex;
+  padding: $loader-padding;
+  position: absolute;
+}

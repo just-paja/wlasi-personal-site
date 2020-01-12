@@ -1,0 +1,55 @@
+@import '../styles/variables.scss';
+
+.mottoHeader {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.mottoBubble {
+  align-items: center;
+  background: $color-heading;
+  border-radius: 100%;
+  display: flex;
+  font-size: $font-size-sm;
+  height: $grid-size * 16;
+  line-height: $line-height-sm;
+  margin: 0;
+  padding: $grid-size * 2;
+  position: absolute;
+  text-align: center;
+  width: $grid-size * 16;
+
+  &:nth-child(1) {
+    left: $grid-size * 2;
+    top: 0;
+    @media (min-width: $breakpoint-md) {
+      top: $presenter-size-md / 6;
+      left: $grid-size * 11;
+    }
+  }
+  &:nth-child(2) {
+    bottom: 0;
+    left: $grid-size * 2;
+    @media (min-width: $breakpoint-md) {
+      left: $grid-size * 3;
+      top: $presenter-size-md / 2 - $grid-size * 8;
+    }
+  }
+  &:nth-child(3) {
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+      bottom: $presenter-size-md / 6;
+      display: flex;
+      left: $grid-size * 11;
+    }
+  }
+}
+
+.mottoBubbleSmall {
+  height: $grid-size * 12;
+  width: $grid-size * 12;
+}

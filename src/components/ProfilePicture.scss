@@ -1,0 +1,40 @@
+@import '../styles/variables.scss';
+
+@keyframes hide-logo {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.profilePicture {
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  height: $presenter-size-xs;
+  width: $presenter-size-xs;
+
+  @media (min-width: $breakpoint-md) {
+    width: $presenter-size-md;
+    height: $presenter-size-md;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.profilePictureLogo {
+  align-items: center;
+  animation: hide-logo 6s;
+  animation-fill-mode: forwards;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}

@@ -1,7 +1,32 @@
+$min-size: 360px;
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
 $color-cream: #f6ead0;
 $color-gold: #d6a444;
 $color-chocolate: #614229;
 
+$color-primary: $color-chocolate;
+$color-secondary: $color-gold;
 $color-background: $color-cream;
 $color-normal: $color-chocolate;
-$color-heading: $color-gold;
+$color-heading: rgba($color-gold, 0.9);
+
+$grid-size: 8px;
+
+$font-size-sm: 16px;
+$font-size-md: 24px;
+$font-size-lg: 32px;
+$font-size-xl: 40px;
+
+$line-height-sm: $font-size-sm * 1.5;
+$line-height-md: $font-size-md * 1.5;
+$line-height-lg: $font-size-lg * 1.5;
+$line-height-xl: $font-size-xl * 1.5;
+
+$presenter-size-xs: $min-size - $grid-size * 4;
+$presenter-size-md: $breakpoint-sm;

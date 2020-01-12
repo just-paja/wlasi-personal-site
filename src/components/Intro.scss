@@ -1,0 +1,16 @@
+@import '../styles/variables.scss';
+
+$logo-size: 512px;
+
+.introHeading {
+  display: none;
+}
+
+.introSection {
+  background: $color-primary;
+  padding: $line-height-md 0;
+}
+
+.introSectionContainer {
+  padding: 0;
+}
