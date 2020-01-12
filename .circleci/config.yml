@@ -54,6 +54,9 @@ jobs:
           fingerprints:
             - "47:1c:8b:3d:98:f9:c0:1c:7c:2d:77:e9:cd:46:da:cf"
       - run:
+          name: Install rsync
+          command: apt-get install rsync -y
+      - run:
           name: Install python requirements
           command: |
             python3 -m venv .venv
