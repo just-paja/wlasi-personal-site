@@ -77,20 +77,20 @@ workflows:
   build-n-deploy:
     jobs:
       - install:
-        filters:
-          tags:
-            only: /v[0-9]+\.[0-9]+\.[0-9]+/
+          filters:
+            tags:
+              only: /v[0-9]+\.[0-9]+\.[0-9]+/
       - build:
-        requires:
-          - install
-        filters:
-          tags:
-            only: /v[0-9]+\.[0-9]+\.[0-9]+/
+          requires:
+            - install
+          filters:
+            tags:
+              only: /v[0-9]+\.[0-9]+\.[0-9]+/
       - deploy-to-production:
-        requires:
-          - build
-        filters:
-          tags:
-            only: /v[0-9]+\.[0-9]+\.[0-9]+/
-          branches:
-            ignore: /.*/
+          requires:
+            - build
+          filters:
+            tags:
+              only: /v[0-9]+\.[0-9]+\.[0-9]+/
+            branches:
+              ignore: /.*/
