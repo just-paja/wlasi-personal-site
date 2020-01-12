@@ -33,5 +33,5 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "serve": "^11.3.0"
   },
-  "version": "0.1.6"
+  "version": "0.1.7"
 }
