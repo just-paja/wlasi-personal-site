@@ -8,6 +8,7 @@ import { Section } from './Section';
 import './Intro.scss';
 
 const styles = {
+  contacts: 'introContacts',
   heading: 'introHeading',
   section: 'introSection',
 };
@@ -44,6 +45,9 @@ export function Intro(props) {
         <ProfilePicture />
         <Motto />
       </LogoLoader>
+      <p className={styles.contacts}>
+        <a href='mailto:bartender@honzavlasak.com'>bartender@honzavlasak.com</a>
+      </p>
     </Section>
   );
 }
