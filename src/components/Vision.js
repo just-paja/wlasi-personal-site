@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Section } from './Section';
 
-export function Vision() {
+export function Vision(props) {
   return (
-    <Section id="my-vision">
+    <Section {...props}>
       <h1>My vision</h1>
       <h3>Learn and share knowledge</h3>
       <p>I want to get to know as many different markets as possible, bring know-how from central Europe and just have fun exchanging tips and tricks.</p>

@@ -36,3 +36,13 @@ h2 {
 h3, h4, h5, p {
   margin-top: $line-height-md / 2;
 }
+
+a, a:visited, a:link {
+  color: darken($color-normal, 10%);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: darken($color-normal, 20%);
+  }
+}

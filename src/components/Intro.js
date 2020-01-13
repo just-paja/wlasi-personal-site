@@ -30,7 +30,7 @@ function useInterval(callback, delay) {
   }, [delay])
 }
 
-export function Intro({ variant }) {
+export function Intro(props) {
   const [progress, setProgress] = useState(0);
 
   useInterval(function() {
@@ -38,7 +38,7 @@ export function Intro({ variant }) {
   }, progress < 1 ? 100 : null);
 
   return (
-    <Section inverse>
+    <Section inverse {...props}>
       <h1 className={styles.heading}>Honza Vlasák</h1>
       <LogoLoader progress={progress}>
         <ProfilePicture />

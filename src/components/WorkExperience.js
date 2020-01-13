@@ -45,9 +45,9 @@ When I left the UK and moved back to Prague, I started mixing drinks in this ame
   },
 ]
 
-export function WorkExperience() {
+export function WorkExperience(props) {
   return (
-    <Section inverse id="my-experience">
+    <Section inverse {...props}>
       <h1>My Experience</h1>
       {employments.map(employment => (
         <EmploymentDetail

@@ -58,9 +58,9 @@ const competitions = [
   },
 ]
 
-export function Achievements() {
+export function Achievements(props) {
   return (
-    <Section id="achievements">
+    <Section {...props}>
       <h1>Achievements</h1>
       {competitions.map(competition => (
         <CompetitionDetail

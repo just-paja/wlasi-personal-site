@@ -13,9 +13,23 @@ const styles = {
 
 export default () => (
   <div className={styles.spa}>
-    <Intro />
-    <Vision />
-    <WorkExperience />
-    <Achievements />
+    <Intro
+      id='introduction'
+      next='my-vision'
+    />
+    <Vision
+      id='my-vision'
+      next='work-experience'
+      prev='introduction'
+    />
+    <WorkExperience
+      id='work-experience'
+      next='achievements'
+      prev='my-vision'
+    />
+    <Achievements
+      id='achievements'
+      prev='work-experience'
+    />
   </div>
 )

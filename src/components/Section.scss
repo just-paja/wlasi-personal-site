@@ -3,4 +3,22 @@
 .sectionInverse {
   background: $color-primary;
   color: $color-background;
+
+  a, a:link, a:visited {
+    color: darken($color-background, 10%);
+
+    &:hover {
+      color: darken($color-background, 20%);
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.navSection nav {
+  text-align: center;
 }
