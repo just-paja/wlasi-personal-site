@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { LogoLoader } from './LogoLoader';
 import { Motto } from './Motto';
 import { ProfilePicture } from './ProfilePicture';
-import { Container } from './Container';
+import { Section } from './Section';
 
 import './Intro.scss';
 
@@ -38,14 +38,12 @@ export function Intro({ variant }) {
   }, progress < 1 ? 100 : null);
 
   return (
-    <section className={styles.section}>
-      <Container>
-        <h1 className={styles.heading}>Honza Vlasák</h1>
-        <LogoLoader progress={progress}>
-          <ProfilePicture />
-          <Motto />
-        </LogoLoader>
-      </Container>
-    </section>
+    <Section inverse>
+      <h1 className={styles.heading}>Honza Vlasák</h1>
+      <LogoLoader progress={progress}>
+        <ProfilePicture />
+        <Motto />
+      </LogoLoader>
+    </Section>
   );
 }

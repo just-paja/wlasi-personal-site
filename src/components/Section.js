@@ -2,10 +2,18 @@ import React from 'react';
 
 import { Container } from './Container';
 
-export function Section({ children, ...props }) {
+import './Section.scss';
+
+const styles = {
+  inverse: 'sectionInverse',
+};
+
+export function Section({ children, inverse, ...props }) {
   return (
-    <Container component='section' {...props}>
-      {children}
-    </Container>
+    <div className={inverse ? styles.inverse : null}>
+      <Container component='section' {...props}>
+        {children}
+      </Container>
+    </div>
   )
 }
