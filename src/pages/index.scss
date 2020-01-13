@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: $line-height-md 0;
+  padding-bottom: $line-height-md;
+  padding-top: $line-height-md;
 
   @media (min-width: $breakpoint-md) {
     min-height: 100vh;

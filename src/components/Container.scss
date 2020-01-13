@@ -2,9 +2,11 @@
 
 .container {
   margin: 0 auto;
+  padding: 0 $font-size-md;
   width: 100%;
 
   @media (min-width: $breakpoint-sm) {
+    padding: 0;
     max-width: 540px;
   }
 
