@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Achievements } from '../components/Achievements';
 import { Intro } from '../components/Intro';
 import { Vision } from '../components/Vision';
 import { WorkExperience } from '../components/WorkExperience';
@@ -15,10 +16,6 @@ export default () => (
     <Intro />
     <Vision />
     <WorkExperience />
+    <Achievements />
   </div>
 )
-
-// <Section id="competitions">
-//   <h1>Competitions</h1>
-//   <Competitions />
-// </Section>

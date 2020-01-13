@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { CompetitionDetail } from './CompetitionDetail';
+import { Section } from './Section';
 
 const competitions = [
   {
@@ -57,15 +58,16 @@ const competitions = [
   },
 ]
 
-export function Competitions() {
+export function Achievements() {
   return (
-    <div>
+    <Section id="achievements">
+      <h1>Achievements</h1>
       {competitions.map(competition => (
         <CompetitionDetail
           key={competition.name}
           competition={competition}
         />
       ))}
-    </div>
+    </Section>
   )
 }
